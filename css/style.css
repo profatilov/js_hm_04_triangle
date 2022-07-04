@@ -1,0 +1,22 @@
+body {
+    font-family: 'Roboto Mono', monospace;
+    background: #000;
+    color: white;
+}
+
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.center {
+    width: 800px;
+    height: 100vh;
+}
+
+.result {
+    color: green;
+}
+
