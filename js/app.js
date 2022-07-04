@@ -19,28 +19,27 @@ function buildChristmasTree(rows) {
         return 'Param must be positive or negative integer! Thank you for your cooperation!';
     }
 
-    let resultString = '';
     let isNegative = Math.sign(rows) === -1;
+    let resultString = '';
 
     rows = Math.abs(rows);
 
-    for (let row = 0, hashSigns = 0; row < rows; row++) {
-        hashSigns = row === 0 ? hashSigns += 1 : hashSigns += 2;
+    for (let row = 0, hashSignsCnt = 0; row < rows; row++) {
+        hashSignsCnt = row === 0 ? hashSignsCnt += 1 : hashSignsCnt += 2;
 
-        let dotsOneSide = (( rows * 2 - 1) - hashSigns) / 2;
+        let dotsOneSideCnt = (( rows * 2 - 1) - hashSignsCnt) / 2;
         let dotsOneSideString = '';
         let hashSignsString = '';
-        let tempRowString = '';
 
-        for (let dot = 0; dot < dotsOneSide; dot++) {
+        for (let dot = 0; dot < dotsOneSideCnt; dot++) {
             dotsOneSideString += '.';
         }
 
-        for (let hashSign = 0; hashSign < hashSigns; hashSign++) {
+        for (let hashSign = 0; hashSign < hashSignsCnt; hashSign++) {
             hashSignsString += '#';
         }
 
-        tempRowString = dotsOneSideString + hashSignsString + dotsOneSideString + "\n";
+        let tempRowString = dotsOneSideString + hashSignsString + dotsOneSideString + "\n";
 
         if (isNegative) {
             resultString = tempRowString.concat(resultString);
