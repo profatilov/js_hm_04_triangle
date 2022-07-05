@@ -7,12 +7,12 @@
 // .#########.
 // ###########
 
-let resultString = buildChristmasTree(prompt('How many rows? (positive or negative integer)'));
+let resultString = makeTriangle(prompt('How many rows? (positive or negative integer)'));
 
 document.querySelector('.result').innerText = resultString;
 
 
-function buildChristmasTree(rows) {
+function makeTriangle(rows) {
     rows = parseInt(rows);
 
     if (!Number.isInteger(rows) || rows === 0) {
