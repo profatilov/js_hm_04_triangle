@@ -1,21 +1,9 @@
-// Задание на синий пояс: Треугольник
-// Сформировать следующую строку - треугольник:
-// .....#.....
-// ....###....
-// ...#####...
-// ..#######..
-// .#########.
-// ###########
-
-let resultString = makeTriangle(prompt('How many rows? (positive or negative integer)'));
+let resultString = makeTriangle(parseInt(prompt('How many rows? (positive or negative integer)')));
 
 document.querySelector('.result').innerText = resultString;
 
-
 function makeTriangle(rows) {
     let resultStr = '';
-
-    rows = parseInt(rows);
 
     if (!Number.isInteger(rows) || rows === 0) {
         resultStr = 'Param must be positive or negative integer! Thank you for your cooperation!';
